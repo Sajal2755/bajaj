@@ -18,7 +18,7 @@ app.post("/bfhl", (req, res) => {
     const email = "sajal1232.be21@chiktara.edu.in";
     const roll_number = "1232";
     const even_numbers = data.filter((num) => num % 2 === 0);
-    const odd_numbers = data.filter((num) => num % 2 !== 0);
+    const odd_numbers = data.filter(num => !isNaN(parseInt(num)) && parseInt(num) % 2 !== 0);
     const alphabets = data
       .filter((char) => isNaN(char))
       .map((char) => char.toUpperCase());
